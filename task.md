@@ -1,13 +1,10 @@
-# task.md — VCE — Validity Control Engine for MailSender Pro Görev Takibi
-
-Bu dosya projedeki güncel görevleri takip etmek için kullanılır. Yeni bir göreve başlarken "Devam Eden"e taşı, bitirince "Tamamlanan"a taşı ve tarih ekle.
+# task.md — VCE Görevleri
 
 ## 🔜 Sıradaki
 
-- [ ] `CLAUDE.md` / `architect.md` içeriğini doğrula ve eksikleri tamamla
-- [ ] Repo kökünde `.gitignore` yok — `venv/`, `__pycache__/`, `.env`, build çıktıları için eklenmeli.
-
-> Uzun vadeli / önceliklendirilmemiş fikirler için bkz. `backlog.md`.
+- [ ] Operatör kopyalarını tekilleştir: `operators/` ↔ `dags/operators/` (sembolik link, deploy betiğinde kopyalama ya da tek kaynak + `PYTHONPATH`)
+- [ ] Testleri Airflow kurulu olmadan da çalıştırılabilir yap (`airflow` importlarını conftest'te stub'la) ya da README'ye "Airflow gerekli" notu düş
+- [ ] MailSender güncel şeması (sunucu kopyası `/opt/mailsender` — MSV henüz deploy edilmedi, DB yerelde) ile kural SQL'lerinin uyumunu `tools/test_rule.py --all` ile doğrula — MailSender tablolarında değişiklik oldu mu?
 
 ## 🚧 Devam Eden
 
@@ -15,15 +12,6 @@ _(şu anda boş)_
 
 ## ✅ Tamamlanan
 
-- [x] 2026-10-05 — Proje çalışma dosyaları oluşturuldu
-
----
-
-### Görev Ekleme Şablonu
-
-```markdown
-- [ ] Kısa görev başlığı
-  - Bağlam: neden yapılıyor
-  - Kabul kriteri: ne zaman "bitti" sayılır
-  - İlgili dosyalar: ...
-```
+- [x] 2026-10-05 — Çalışma dosyaları kod okunarak yeniden yazıldı (bu sunucuda Airflow olmadığı için testler çalıştırılamadı: 51 × ModuleNotFoundError)
+- [x] 2026-04-29 — Son güncelleme ("vce")
+- [x] 2026-04-12 → 04-18 — Şema, kurallar, operatörler, ML lifecycle, CI/CD, dashboard

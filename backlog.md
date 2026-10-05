@@ -1,21 +1,16 @@
-# backlog.md — VCE — Validity Control Engine for MailSender Pro Fikir / Özellik Havuzu
+# backlog.md — VCE Fikir Havuzu
 
-Bu dosya henüz önceliklendirilmemiş, "bir gün yapılabilir" fikirler ve özellik talepleri içindir. Bir fikir somutlaşıp sıraya girdiğinde buradan çıkar, `task.md`ye taşınır.
-
-## Fikirler
-
-_(henüz boş — yeni bir fikir geldiğinde aşağıdaki şablonla ekle)_
-
-## Koddaki TODO / FIXME Notları
-
-_(kodda TODO/FIXME notu bulunamadı)_
+- Dashboard'u statik HTML'den canlı sayfaya (Power BI / Superset / basit Flask) taşı.
+- Bildirim kanalları: Slack / Teams / e-posta (MailSender üzerinden) şablonları.
+- Kural yönetimi için küçük web arayüzü (INSERT yerine form + `test_rule.py` entegrasyonu).
+- Diğer kaynaklar: PostgreSQL/MSSQL bağlantı soyutlaması (DQ projesi `/opt/dq` ile birleşme fırsatı).
+- Kalite skorunu MailSender gönderim kararına bağlama (skor eşiğin altındaysa toplu gönderimi durdur).
 
 ## Ekleme Şablonu
 
 ```markdown
 ### Başlık
-
 - **Kategori:** yeni özellik / iyileştirme / teknik borç / araştırma
-- **Neden istendi:** kısa gerekçe
-- **Notlar:** büyüklük tahmini, bağımlılıklar, riskler
+- **Neden:** kısa gerekçe
+- **Notlar:** büyüklük, bağımlılıklar, riskler
 ```
